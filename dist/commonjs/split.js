@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var aurelia_framework_1 = require('aurelia-framework');
+var aurelia_framework_1 = require("aurelia-framework");
 var Split = require("split.js");
 var SplitCustomAttribute = (function () {
     function SplitCustomAttribute(element) {

@@ -1,4 +1,4 @@
-import { inject, bindable, bindingMode, DOM } from 'aurelia-framework';
+import { inject, bindable, bindingMode, DOM } from "aurelia-framework";
 import * as Split from "split.js";
 
 @inject(DOM.Element)
