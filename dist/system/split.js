@@ -27,6 +27,7 @@ System.register(["aurelia-framework", "split.js"], function(exports_1, context_1
                     this.sizes = [];
                 }
                 SplitCustomAttribute.prototype.attached = function () {
+                    var _this = this;
                     var options = {};
                     if (options.sizes) {
                         options.sizes = this.sizes;
@@ -46,6 +47,9 @@ System.register(["aurelia-framework", "split.js"], function(exports_1, context_1
                     if (options.cursor) {
                         options.cursor = this.cursor;
                     }
+                    options.onDrag = function () { return _this.element.dispatchEvent(new CustomEvent("split-on-drag", { bubbles: true })); };
+                    options.onDragStart = function () { return _this.element.dispatchEvent(new CustomEvent("split-on-drag-start", { bubbles: true })); };
+                    options.onDragEnd = function () { return _this.element.dispatchEvent(new CustomEvent("split-on-drag-end", { bubbles: true })); };
                     var array = [];
                     for (var idx = 0; idx < this.element.children.length; idx++) {
                         this.element.children[idx].classList.add("split");

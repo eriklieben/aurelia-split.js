@@ -1,6 +1,6 @@
 {
   "name": "aurelia-split.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A plugin to use split.js with Aurelia",
   "keywords": [
     "aurelia",
