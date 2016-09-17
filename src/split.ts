@@ -52,6 +52,10 @@ export class SplitCustomAttribute {
        options.cursor = this.cursor;
     }
 
+    options.onDrag = () => this.element.dispatchEvent(new CustomEvent("split-on-drag", { bubbles: true }));
+    options.onDragStart = () => this.element.dispatchEvent(new CustomEvent("split-on-drag-start", { bubbles: true }));
+    options.onDragEnd = () => this.element.dispatchEvent(new CustomEvent("split-on-drag-end", { bubbles: true }));
+
     let array: Array<Element> = [];
 
     for (let idx = 0; idx < this.element.children.length; idx++) {
